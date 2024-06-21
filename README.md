@@ -2,7 +2,7 @@
 For ease of use it is highly reccomended to use github desktop
 <h3>Rules for interaction</h3>
 Currently seems like files are user specific. Subject to change as i understand the unreal structure
-Always pull from git repo before loading the project in unreal
+To avoid as many conflicts, we will be creating new branches for new features. Which will be deleted after they are PR'ed into main
 Changing branch or pulling from repo while the unreal project is loaded will result in temporary freezing and a desync from git.
 During which changes might not be saved correctly to your branch
 Put all new files into Dynamic folder, Static files will be moved to static folder during PR's
