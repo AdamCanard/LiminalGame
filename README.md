@@ -1,11 +1,11 @@
 <h1>Using UE5 with GitHub</h1>
 For ease of use it is highly reccomended to use github desktop
 <h3>Rules for interaction</h3>
-Currently seems like files are user specific. Subject to change as i understand the unreal structure
-To avoid as many conflicts, we will be creating new branches for new features. Which will be deleted after they are PR'ed into main
+I am considering creating two folders in content, "Adam" and "Everest" where all new assets/blueprints will be stored.
+This will avoid a majority of merge conflict issues, The only foreseeable problem is with map files but this will be circumvented with a DEV branch that our respective branches are PR'ed to for testing before going to main
+For now we will have main, dev, Adam, Everest branches. I might switch to a feature branch architechture but only after i understand unreal workflow more
 Changing branch or pulling from repo while the unreal project is loaded will result in temporary freezing and a desync from git.
 During which changes might not be saved correctly to your branch
-Put all new files into Dynamic folder, Static files will be moved to static folder during PR's
 
 <h2>Getting Cloned</h2>
 In GitHub Desktop, Go to file and hit "Clone a repository"
@@ -16,22 +16,13 @@ Set Local path to
 <h2>Getting it Open</h2>
 Start UE5, Liminal Game should ne in your project repo. If not message me  
 
-<h2>Version Control Dump</h2>
-
-For version control on Github content file will be split into "Dynamic" and "Static"
-Dynamic files include blueprints, bindings, scripts. Any assest that might change frequently
-Static files include meshes, textures, audio, animations. Typically larger game files that dont change
-
-<h3>Reason for File structure:</h3>
-Due to the small nature of the project, we will use the github LFS for storing large assets which dont change. This will make each version control action to be more efficient as we wont be updating large files unless its neccesary.
-
 <h3>Unreal Workflow for maintaining version control:</h3>
 Due to the nature of binary files, you cant merge or compare them.
-This is only a real concern is with blueprint files as most binary files are not edited once they are added like maps and assets.
 If two different people work on the same blueprint file, it will create a merge conflict that wont be comparable with no way of knowing which version to take
-  <h3>The Solution: Naming conventions!</h3>
-  The naming convention will be very simple, every new asset needs to have its name start with E or A depending on who has control of that asset
-  Ex: If Everest make a new blueprint it will be named "E (blueprint_name)"
-
+  <h3>The Solution: Seperate Folders!</h3>
+  There will be an Adam Folder and an Everest Folder that each of us will create our new assest/blueprints in
+  This is only for merge conflict as it will let me take incoming or current based on who made changes in what folder
+  This wont solve map/levels files from merge conflicts so I am wanting to implement the dev branch for combining levels
+  In the future i might seperate map/level files further if we start losing versions due to inproper merging on my part 
   
   
