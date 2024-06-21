@@ -1,5 +1,11 @@
 <h1>Using UE5 with GitHub</h1>
 For ease of use it is highly reccomended to use github desktop
+<h3>Rules for interaction</h3>
+Currently seems like files are user specific. Subject to change as i understand the unreal structure
+Always pull from git repo before loading the project in unreal
+Changing branch or pulling from repo while the unreal project is loaded will result in temporary freezing and a desync from git.
+During which changes might not be saved correctly to your branch
+Put all new files into Dynamic folder, Static files will be moved to static folder during PR's
 
 <h2>Getting Cloned</h2>
 In GitHub Desktop, Go to file and hit "Clone a repository"
@@ -24,12 +30,8 @@ Due to the nature of binary files, you cant merge or compare them.
 This is only a real concern is with blueprint files as most binary files are not edited once they are added like maps and assets.
 If two different people work on the same blueprint file, it will create a merge conflict that wont be comparable with no way of knowing which version to take
   <h3>The Solution: Naming conventions!</h3>
-  The naming convention will be very simple, every new binary asset from the list below needs to have its name start with E or A depending on who has control of that asset
+  The naming convention will be very simple, every new asset needs to have its name start with E or A depending on who has control of that asset
   Ex: If Everest make a new blueprint it will be named "E (blueprint_name)"
-  
-  <h4>I will update this list with all the assets that require special naming convention</h4>
-  <ul>
-    <li>Blueprints</li>
-  </ul>
+
   
   
