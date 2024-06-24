@@ -1,6 +1,9 @@
 # Visual Studio 2015 user specific files
 .vs/
 
+#ignore gitignore
+.gitignore
+
 # Compiled Object files
 *.slo
 *.lo
