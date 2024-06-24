@@ -77,4 +77,4 @@ Plugins/*/Intermediate/*
 DerivedDataCache/*
 
 # Ignores all edits from Everests folder
-Content/Everest/**
+Content/Adam/**
